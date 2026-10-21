@@ -31,8 +31,8 @@
 
 /* OpenSSL libcrypto function pointers loaded dynamically at runtime */
 typedef void* (*EVP_CIPHER_CTX_new_fn)(void);
-typedef void (*EVP_CIPHER_CTX_free_fn)(void);
-typedef int (*EVP_CIPHER_CTX_reset_fn)(void);
+typedef void (*EVP_CIPHER_CTX_free_fn)(void*);
+typedef int (*EVP_CIPHER_CTX_reset_fn)(void*);
 typedef void* (*EVP_aes_256_cfb128_fn)(void);
 typedef int (*EVP_DecryptInit_ex_fn)(void*, void*, void*, const unsigned char*, const unsigned char*);
 typedef int (*EVP_DecryptUpdate_fn)(void*, unsigned char*, int*, const unsigned char*, int);
